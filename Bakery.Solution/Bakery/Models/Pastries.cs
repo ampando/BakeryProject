@@ -2,23 +2,39 @@ using System;
 
 namespace Bakery.Models
 {
-  public class Pastry
+  public class PastryOrder
   {
     public int Price { get; set; }
+    
     public int NumberOfPastries { get; set; }
-    public Pastry(int numberOfPastries)
+    
+    public PastryOrder(int numberOfPastries)
     {
       Price = 2;
       NumberOfPastries = numberOfPastries;
     }
-    public void TotalPastryPrice()
+    
+    public bool IsOnlyPositiveNumberCharacters2()
     {
-      Price = (Price * NumberOfPastries);
-      int pastryDeal = (NumberOfPastries / 3);
-      if (pastryDeal >= 1)
+      if (NumberOfPastries > 0)
       {
-      Price -= pastryDeal;
+        return true;
       }
+      else
+      {
+        return false;
+      }
+    }
+    
+    public int GetPastryTotal()
+    {
+      int newPastryTotal = TotalPastryCost * NumberOfPastries;
+      if (NumberOfPastries > 2)
+      {
+        newPastryTotal -= ((NumberPastries/3) * 1);
+      }
+      return newPastryTotal;
     }
   }
 }
+  

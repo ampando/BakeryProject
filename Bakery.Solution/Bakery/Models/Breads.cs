@@ -6,6 +6,7 @@ namespace Bakery.Models
   {
     public int Price { get; set; }
     public int NumberOfLoaves { get; set; }
+    
     public Bread(int numberOfLoaves)
     {
       Price = 5;

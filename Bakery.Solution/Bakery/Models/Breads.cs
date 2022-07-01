@@ -11,7 +11,6 @@ namespace Bakery.Models
       Price = 5;
       NumberOfLoaves = numberOfLoaves;
     }
-    //public void TotalBreadPrice()
     
     public bool IsOnlyPositiveNumberCharacters()
     {
@@ -30,7 +29,7 @@ namespace Bakery.Models
       int newTotal = Price * NumberOfLoaves;
       if (NumberOfLoaves > 2)
       {
-        newTotal -= ((NumberOfLoaves/3)*5);
+        newTotal -= ((NumberOfLoaves/3)*10);
       }
       return newTotal;
     }

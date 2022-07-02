@@ -42,7 +42,7 @@ namespace BakeryShop
         Start();
       }
     
-      Console.WriteLine("Here is your grand total: $" + (newBread.GetTotalBreadPrice() + newPastryOrder.GetPastryTotal()));
+      Console.WriteLine("Here is your grand total: $" + (newBread.TotalBreadPrice() + newPastryOrder.GetPastryTotal()));
     }
   }
 }

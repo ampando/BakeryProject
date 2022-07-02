@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Bakery.Models;
+using System;
 
 namespace Bakery.Tests
 {
@@ -10,34 +11,22 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_ConstructAnInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread(2);
+      Bread newBread = new Bread();
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
+    
     [TestMethod]
-    public void GetPrice_ReturnsPrice_Int()
+    public void IsOnlyPositiveNumberCharacters_ChecksIfInputIsOfNumberChars_False()
     {
-      int testPrice = 5;
+      Bread newBread = new Bread(-1);
+      Assert.AreEqual(false, newBread.IsOnlyPositiveNumberCharacters());
+    }
+
+    [TestMethod]
+    public void TotalBreadPrice_ReturnsBreadTotalToUser_10()
+    {
       Bread newBread = new Bread(2);
-      int result = newBread.Price;
-      Assert.AreEqual(testPrice, result);
-    }
-    [TestMethod]
-    public void GetNumberOfLoaves_ReturnNumberOfLoaves_Int()
-    {
-      int testLoaves = 2;
-      Bread newBread = new Bread(testLoaves);
-      int result = newBread.NumberOfLoaves;
-      Assert.AreEqual(testLoaves, result);
-    }
-    [TestMethod]
-    public void TotalBreadPrice_ReturnsPriceBasedOnNumberOfLoaves_Int()
-    {
-      int testLoaves = 2;
-      int testPrice = 10;
-      Bread newBread = new Bread(testLoaves);
-      newBread.TotalBreadPrice();
-      int result = newBread.Price;
-      Assert.AreEqual(testPrice, result);
-    }
+      Assert.AreEqual(10, newBread.TotalBreadPrice());  
+    }  
   }
 }

@@ -28,10 +28,10 @@ namespace Bakery.Models
     
     public int GetPastryTotal()
     {
-      int newPastryTotal = TotalPastryCost * NumberOfPastries;
+      int newPastryTotal = Price * NumberOfPastries;
       if (NumberOfPastries > 2)
       {
-        newPastryTotal -= ((NumberPastries/3) * 1);
+        newPastryTotal -= ((NumberOfPastries/3) * 1);
       }
       return newPastryTotal;
     }

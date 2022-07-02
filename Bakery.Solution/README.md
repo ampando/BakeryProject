@@ -39,7 +39,7 @@ This is our first independent project using C#! The application is for a bakery 
 
 3. Navigate to the `Bakery.Solution` directory in your editor of choice, or use [Visual Studio Code](https://code.visualstudio.com/)
 
-5. Within the project, navigate to the Bakery directory, and type `dotnet run`. This will open the interactive console app. There will be several lines of introductory material. Press 'Enter' to navigate through the welcome information.
+5. Within the project, navigate to the `Bakery` directory, and type `dotnet run`. This will open the interactive console app. There will be several lines of introductory material. Press 'Enter' to navigate through the welcome information.
 
 6. If you wish to test the code, navigate to the Bakery.Tests directory. In the terminal type `dotnet restore`, then `dotnet test`.
 

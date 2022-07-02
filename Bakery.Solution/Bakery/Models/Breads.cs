@@ -15,7 +15,7 @@ namespace Bakery.Models
     
     public bool IsOnlyPositiveNumberCharacters()
     {
-      if (NumberOfLoaves < 0)
+      if (NumberOfLoaves > 0)
       {
         return true;
       }

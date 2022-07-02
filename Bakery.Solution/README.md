@@ -1,6 +1,6 @@
 # Bakery Shop Project 
 
-#### Test-Driven Development with C# Exercise for Epicodus 06.20.2022
+#### Test-Driven Development with C# Exercise for Epicodus 06.30.2022
 
 ### By Adrienne Matosich 
 

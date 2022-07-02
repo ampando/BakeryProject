@@ -10,7 +10,7 @@ namespace Bakery.Models
     
     public PastryOrder(int numberOfPastries)
     {
-      Price = 2;
+      Price = 3;
       NumberOfPastries = numberOfPastries;
     }
     

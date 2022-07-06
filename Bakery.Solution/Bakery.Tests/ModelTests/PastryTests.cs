@@ -32,6 +32,14 @@ namespace Bakery.Tests
     }
     
     [TestMethod]
+    public void DealPrice_GetsDealPriceTotal_Int()
+    {
+    PastryOrder newPastryOrder = new PastryOrder(3);
+    int result = newPastryOrder.GetPastryTotal();
+    Assert.AreEqual(6, result);
+    }
+
+    [TestMethod]
     public void GetPastryTotal_ReturnsPastryTotalToUser_4()
     {
     PastryOrder newPastryOrder = new PastryOrder(2);

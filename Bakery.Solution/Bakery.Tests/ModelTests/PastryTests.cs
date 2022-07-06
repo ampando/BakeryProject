@@ -36,7 +36,7 @@ namespace Bakery.Tests
     {
     PastryOrder newPastryOrder = new PastryOrder(3);
     int result = newPastryOrder.GetPastryTotal();
-    Assert.AreEqual(6, result);
+    Assert.AreEqual(5, result);
     }
 
     [TestMethod]

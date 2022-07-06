@@ -28,7 +28,7 @@ namespace Bakery.Tests
       int breadOrder = 6;
       Bread newBread = new Bread(breadOrder);
       int result = newBread.TotalBreadPrice();
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(20, result);
     }
     
     [TestMethod]

@@ -9,8 +9,12 @@ namespace BakeryShop
   {
     public static void Main()
     {
-      Console.WriteLine("Welcome to Pierre's Bakery");
-      Console.WriteLine("Our loaves of bread are $5 or choose 3 for $10. Our pastries are $2 each or 3 for $5");
+      Console.WriteLine("Welcome to Pierre's Bakery!");
+      Console.WriteLine("Our loaves of bread are $5 each."); 
+      Console.WriteLine("Our pastries are $2 each.");
+      Console.WriteLine("Pierre is offering the following specials today:");
+      Console.WriteLine("Loaves: Buy 2, Get One Free."); 
+      Console.WriteLine("Pastries: 3 for $5");
       Start();
     }
     
@@ -21,11 +25,11 @@ namespace BakeryShop
 
       if (newBread.IsOnlyPositiveNumberCharacters())
       {
-        Console.WriteLine("Here is your bread order total: $" + (newBread.TotalBreadPrice()));
+        Console.WriteLine("Your bread order total is: $" + (newBread.TotalBreadPrice()));
       }
       else
       {
-        Console.WriteLine("Please enter a positive number");
+        Console.WriteLine("Please enter a positive number.");
         Start();
       }
     
@@ -34,15 +38,15 @@ namespace BakeryShop
 
       if (newPastryOrder.IsOnlyPositiveNumberCharacters2())
       {
-        Console.WriteLine("Here is your pastry order total: $" + (newPastryOrder.GetPastryTotal()));
+        Console.WriteLine("Your pastry order total is: $" + (newPastryOrder.GetPastryTotal()));
       }
       else
       {
-        Console.WriteLine("Please enter a positive number");
+        Console.WriteLine("Please enter a positive number.");
         Start();
       }
-    
-      Console.WriteLine("Here is your grand total: $" + (newBread.TotalBreadPrice() + newPastryOrder.GetPastryTotal()));
+      Console.WriteLine("Order Complete! Thank you for shopping at Pierre's Bakery.");
+      Console.WriteLine("Your Grand Total is: $" + (newBread.TotalBreadPrice() + newPastryOrder.GetPastryTotal()));
     }
   }
 }

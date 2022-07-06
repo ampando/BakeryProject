@@ -23,6 +23,15 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
+    public void DealPrice_GetsDealPriceTotal_Int()
+    { 
+      int breadOrder = 6;
+      Bread newBread = new Bread(breadOrder);
+      int result = newBread.TotalBreadPrice();
+      Assert.AreEqual(10, result);
+    }
+    
+    [TestMethod]
     public void TotalBreadPrice_ReturnsBreadTotalToUser_10()
     {
       Bread newBread = new Bread(2);

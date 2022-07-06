@@ -30,7 +30,7 @@ namespace Bakery.Models
       int newTotal = Price * NumberOfLoaves;
       if (NumberOfLoaves > 2)
       {
-        newTotal -= ((NumberOfLoaves/3)*10);
+        newTotal -= ((NumberOfLoaves/3)*5);
       }
       return newTotal;
     }

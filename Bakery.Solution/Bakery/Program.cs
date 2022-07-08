@@ -70,6 +70,7 @@ namespace BakeryShop
         Console.WriteLine("Please enter a positive number.");
         Start();
       }
+      string startOver = "";
       Console.ForegroundColor = blue;
       Console.WriteLine("Order Complete! Thank you for shopping at Pierre's Bakery.");
       Console.WriteLine("");
@@ -78,10 +79,23 @@ namespace BakeryShop
       Console.WriteLine("");
       Console.ResetColor();
       Console.ForegroundColor = green;
-      Console.WriteLine("If you'd like to shop again, enter dotnet run on the command line.");
-      Console.WriteLine("");
+      Console.WriteLine("Would you like to shop again? (enter 'yes' or 'no'.)");
+      startOver = Console.ReadLine();
+      if (startOver == "no")
+      {
+        Console.WriteLine("Order Complete! Thank you for shopping at Pierre's Bakery.");
+      }
+      else
+      {
+        if (startOver == "yes")
+        {
+          Console.WriteLine("Great news, what else can we help you with?");
+          Main();
+        }
+      }
     }
   }
 }
+
   
 

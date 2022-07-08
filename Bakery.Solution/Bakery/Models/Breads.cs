@@ -28,13 +28,16 @@ namespace Bakery.Models
     public int TotalBreadPrice()
     {
       int newTotal = Price * NumberOfLoaves;
-      if (NumberOfLoaves > 2)
+      if (NumberOfLoaves >= 3)
       {
-        newTotal -= ((NumberOfLoaves/3)*5);
+        int discountLoaves = (NumberOfLoaves - (NumberOfLoaves / 3));
+        return discountLoaves * 5;
       }
-      return newTotal;
-    }
-    
+        else
+      {
+      return NumberOfLoaves * 5;
+      }
+    } 
   }
 }
 
